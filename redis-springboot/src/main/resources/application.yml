@@ -1,0 +1,35 @@
+server:
+  port: 9000
+
+spring:
+  redis:
+    # Redis服务器地址
+    host: redis.sirius.com
+    # Redis服务器端口号
+    port: 36379
+    # 使用的数据库索引，默认是0
+    database: 0
+    # 设置密码
+    #    password:
+    # 连接超时时间
+    timeout: 3000ms # 连接超时时间（毫秒
+#    jedis:
+#      pool:
+#        # 连接池最大连接数，若为负责则表示没有任何限制
+#        max-active: 8
+#        #连接池最大阻塞等待时间，若为负责则表示没有任何限制
+#        max-wait: -1
+#        #连接池中的最大空闲连接
+#        max-idle: 8
+#        # 连接池中的最小空闲连接
+#        min-idle: 0
+    lettuce:
+      pool:
+        # 最大阻塞等待时间，负数表示没有限制
+        max-wait: -1
+        # 连接池中的最大空闲连接
+        max-idle: 5
+        # 连接池中的最小空闲连接
+        min-idle: 0
+        # 连接池中最大连接数，负数表示没有限制
+        max-active: 20

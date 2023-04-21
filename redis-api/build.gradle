@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+}
+
+//项目属性
+group 'com.sirius'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+// 引入中央仓库
+repositories {
+    // 本地
+    mavenLocal()
+    // 阿里云
+    maven {
+        name 'Alibaba Maven Repository'
+        url 'https://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    // maven 中央仓库
+    mavenCentral()
+    // 私服
+//    maven {
+//        // 需要认证时，配置用户名密码
+//        credentials {
+//            username 'username'
+//            password 'password'
+//        }
+//        name 'My Maven Repository'
+//        url 'http://localhost:8081/repository/jzman-releases/'
+//    }
+}
+
+dependencies {
+    compile group: 'junit', name: 'junit', version: '4.12'
+    // Map 风格
+    compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
+    // 采用简写方式声明 group:name:version 风格
+    compile 'org.redisson:redisson:3.17.4'
+}
+
+test {
+    testLogging {
+        // Show that tests are run in the command-line output
+        events 'started', 'passed'
+    }
+}

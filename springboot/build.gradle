@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.2.9.RELEASE'
+    //org.springframework.boot插件，不能单独使用，要和io.spring.dependency-management插件一起使用。并且io.spring.dependency-management类似于maven中的标签，只做依赖的管理，不做实际依赖。
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+}
+
+group 'com.sirius'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    //springboot
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    testCompile('org.springframework.boot:spring-boot-starter-test'){
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'io.micrometer:micrometer-registry-prometheus'
+}

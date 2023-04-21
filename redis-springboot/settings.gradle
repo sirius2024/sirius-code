@@ -1,0 +1,4 @@
+// 项目名称
+rootProject.name = 'redis-springboot'
+
+//include '子项目'
