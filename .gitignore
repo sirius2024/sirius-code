@@ -1,0 +1,58 @@
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+*.log
+
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.
+
+
+**/mvnw
+**/mvnw.cmd
+
+**/*.mvn
+**/target/
+
+.idea
+**/.gitignore
+
+
+.classpath
+.project
+.idea
+*.iws
+*.iml
+*.ipr
+
+
+
+.gradle
+build
+/build
+**/
+**/.iml
+**/.idea
+**/.gradle
+**/build
+/out
+
+
+gradle/
+.idea/
+build/
+/gradlew.bat
+/gradlew
+/LOG_FILE_IS_UNDEFINED
+/out
+.gradle/
